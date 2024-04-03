@@ -1,4 +1,5 @@
---question:
+--Codewars SQL QUESTIONS:
+--question 1:
 -- For this challenge you need to create a simple SELECT statement that will return all columns from the people table WHERE their age is over 50.  You should return all people fields where their age is over 50 and order by the age descending.
 
 -- people table schema
@@ -12,7 +13,7 @@ from people
 where age > '50'
 order by age desc;
 
---quesiton:
+--quesiton 2:
 --For this challenge you need to create a simple SUM statement that will sum all the ages.
 
 -- people table schema
@@ -27,7 +28,7 @@ order by age desc;
 --answer: 
 SELECT SUM(age) AS age_sum FROM people;
 
---question: 
+--question 3: 
 -- For this challenge you need to create a simple MIN / MAX statement that will return the Minimum and Maximum ages out of all the people.
 
 -- people table schema
@@ -42,7 +43,7 @@ SELECT SUM(age) AS age_sum FROM people;
 --answer: 
 SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people;
 
---question:
+--question 4:
 -- Create a simple SELECT query to display student information of all ACTIVE students.
 
 -- TABLE STRUCTURE:
@@ -58,7 +59,7 @@ SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people;
 --answer:
 SELECT * FROM students WHERE IsActive = 1;
 
---question: For this challenge you need to create a simple GROUP BY statement, you want to group all the people by their age and count the people who have the same age.
+--question 5: For this challenge you need to create a simple GROUP BY statement, you want to group all the people by their age and count the people who have the same age.
 
 -- people table schema
 -- id
@@ -71,7 +72,7 @@ SELECT * FROM students WHERE IsActive = 1;
 --answer:
 SELECT age, COUNT(*) AS people_count FROM people GROUP BY age;
 
---question: For this challenge you need to create a simple HAVING statement, you want to count how many people have the same age and return the groups with 10 or more people who have that age.
+--question 6: For this challenge you need to create a simple HAVING statement, you want to count how many people have the same age and return the groups with 10 or more people who have that age.
 
 -- people table schema
 -- id
@@ -83,3 +84,4 @@ SELECT age, COUNT(*) AS people_count FROM people GROUP BY age;
 
 --answer:
 SELECT age, COUNT(*) AS total_people FROM people GROUP BY age HAVING COUNT(*) >= 10;
+
